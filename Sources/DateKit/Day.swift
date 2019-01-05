@@ -21,8 +21,19 @@ public struct Day {
         return Day(from: Date(), in: .current)
     }
     
+    /**
+     The raw representation of the year.
+     */
     public let year: Int
+    
+    /**
+     The raw representation of the month.
+     */
     public let month: Int
+    
+    /**
+     The raw representation of the day.
+     */
     public let day: Int
     
     /**
@@ -164,4 +175,7 @@ extension Day: Comparable {
     }
 }
 
+/**
+ A typealias that uses the Android naming convention for the `Day` object.
+ */
 public typealias LocalDate = Day

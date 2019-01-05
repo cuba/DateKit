@@ -26,9 +26,24 @@ public struct Time {
         return Time(from: Date(), in: .current)
     }
     
+    /**
+     The raw representation of the hour.
+     */
     public let hour: Int
+    
+    /**
+     The raw representation of the minute.
+     */
     public let minute: Int
+    
+    /**
+     The raw representation of the second.
+     */
     public let second: Int
+    
+    /**
+     The raw representation of the nanosecond.
+     */
     public let nanosecond: Int
     
     /**
@@ -101,4 +116,7 @@ public struct TimeRange {
     public var endTime: Time
 }
 
+/**
+ A typealias that uses the Android naming convention for the `Time` object.
+ */
 public typealias LocalTime = Time

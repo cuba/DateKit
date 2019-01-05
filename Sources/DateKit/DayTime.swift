@@ -22,8 +22,15 @@ public struct DayTime {
         let time = Time.now
         return DayTime(day: day, time: time)
     }
-    
+
+    /**
+     The nested object that represents the date componenents of this object.
+     */
     public let day: Day
+    
+    /**
+     The nested object that represents the time componenents of this object.
+     */
     public let time: Time
     
     /**
@@ -114,4 +121,7 @@ extension DayTime: Comparable {
     }
 }
 
+/**
+ A typealias that uses the Android naming convention for the `DayTime` object.
+ */
 public typealias LocalDateTime = DayTime

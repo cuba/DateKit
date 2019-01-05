@@ -13,12 +13,36 @@ import Foundation
  Years, and months are not supported as they cannot be converted to a time interval without knowing a reference date and time zone. The reason for this is because the length of a month or year (in seconds) changes depending on the reference date. Leap years, for example, are shorter in seconds than non-leap years and a single month may be between 28 days (i.e. February) to 31 days (ex: December).
  */
 public struct Duration {
-    var weeks = 0
-    var days = 0
-    var hours = 0
-    var minutes = 0
-    var seconds = 0
-    var nanoseconds = 0
+    
+    /**
+     The duration in weeks represented in this object.
+     */
+    public var weeks = 0
+    
+    /**
+     The duration in days represented in this object.
+     */
+    public var days = 0
+    
+    /**
+     The duration in hours represented in this object.
+     */
+    public var hours = 0
+    
+    /**
+     The duration in minutes represented in this object.
+     */
+    public var minutes = 0
+    
+    /**
+     The duration in seconds represented in this object.
+     */
+    public var seconds = 0
+    
+    /**
+     The duration in nanoseconds represented in this object.
+     */
+    public var nanoseconds = 0
     
     /**
      Create the object with the elapsed duration in terms of its individual components.
