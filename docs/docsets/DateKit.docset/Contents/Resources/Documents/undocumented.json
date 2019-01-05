@@ -1,0 +1,26 @@
+{
+  "warnings": [
+    {
+      "file": "/Users/jacob.sikorski/Developer/jacob/DateKit/Sources/DateKit/Day.swift",
+      "line": 178,
+      "symbol": "LocalDate",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob.sikorski/Developer/jacob/DateKit/Sources/DateKit/DayTime.swift",
+      "line": 124,
+      "symbol": "LocalDateTime",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    },
+    {
+      "file": "/Users/jacob.sikorski/Developer/jacob/DateKit/Sources/DateKit/Time.swift",
+      "line": 119,
+      "symbol": "LocalTime",
+      "symbol_kind": "source.lang.swift.decl.typealias",
+      "warning": "undocumented"
+    }
+  ],
+  "source_directory": "/Users/jacob.sikorski/Developer/jacob/DateKit"
+}
