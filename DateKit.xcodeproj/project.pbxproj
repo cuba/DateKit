@@ -38,7 +38,6 @@
 		DA7E1BEE21E159C300CCB7E0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BED21E159C300CCB7E0 /* Date+Extensions.swift */; };
 		DA7E1BEF21E159C300CCB7E0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BED21E159C300CCB7E0 /* Date+Extensions.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_41 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
 		OBJ_43 /* DateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "DateKit::DateKit::Product" /* DateKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -75,7 +74,6 @@
 		DA7E1BED21E159C300CCB7E0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		"DateKit::DateKit::Product" /* DateKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DateKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"DateKit::DateKitTests::Product" /* DateKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = DateKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,7 +136,6 @@
 				DA7E1BE621E0810D00CCB7E0 /* DayTimeTests.swift */,
 				DA7E1BE421E080EC00CCB7E0 /* TimeTests.swift */,
 				DA7E1BE221E07B9200CCB7E0 /* DayTests.swift */,
-				OBJ_13 /* XCTestManifests.swift */,
 			);
 			name = DateKitTests;
 			path = Tests/DateKitTests;
@@ -353,7 +350,6 @@
 				DA7E1BE521E080EC00CCB7E0 /* TimeTests.swift in Sources */,
 				DA7E1BE721E0810D00CCB7E0 /* DayTimeTests.swift in Sources */,
 				DA7E1BE321E07B9200CCB7E0 /* DayTests.swift in Sources */,
-				OBJ_41 /* XCTestManifests.swift in Sources */,
 				DA7E1BEC21E14A4800CCB7E0 /* DurationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
