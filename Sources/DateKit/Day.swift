@@ -22,9 +22,13 @@ struct Day {
         return self + 1
     }
     
-    private init?(year: Int, month: Int, day: Int) {
+    var previousDay: Day {
+        return self - 1
+    }
+    
+    init(year: Int, month: Int, day: Int) {
         let dateComponents = DateComponents(calendar: .current, timeZone: .current, year: year, month: month, day: day)
-        guard let date = dateComponents.date else { return nil }
+        let date = dateComponents.date!
         self.init(from: date, in: .current)
     }
     
@@ -37,22 +41,22 @@ struct Day {
     }
     
     func date(with time: Time, in timeZone: TimeZone) -> Date {
-        let dateComponents = DateComponents(calendar: .current, timeZone: timeZone, year: year, month: month, day: day)
+        let dateComponents = DateComponents(calendar: .current, timeZone: timeZone, year: year, month: month, day: day, hour: time.hour, minute: time.minute, second: time.second, nanosecond: time.nanosecond)
         return dateComponents.date!
     }
     
     func dateRange(in timeZone: TimeZone) -> Range<Date> {
         let startDate = date(with: .midnight, in: timeZone)
-        let endDate = startDate
+        let endDate = nextDay.date(with: .midnight, in: timeZone)
         return startDate..<endDate
     }
     
     func timeIntervalSince1970(in timeZone: TimeZone) -> TimeInterval {
-        return date(with: Time.midnight, in: timeZone).timeIntervalSince1970
+        return date(with: .midnight, in: timeZone).timeIntervalSince1970
     }
     
     func timeInterval(since day: Day, in timeZone: TimeZone) -> TimeInterval {
-        return date(with: Time.midnight, in: timeZone).timeIntervalSince(day.date(with: Time.midnight, in: timeZone))
+        return date(with: .midnight, in: timeZone).timeIntervalSince(day.date(with: Time.midnight, in: timeZone))
     }
     
     func numberOfDays(since day: Day, in timeZone: TimeZone) -> Int {
@@ -65,16 +69,16 @@ struct Day {
         return self.date(with: time, in: timeZone)
     }
     
-    static func + (lhs: Day, days: UInt) -> Day {
+    static func + (lhs: Day, days: Int) -> Day {
         let timeInterval = TimeInterval.day * Double(days)
-        let date = lhs.date(with: Time.midnight, in: .current).addingTimeInterval(timeInterval)
+        let date = lhs.date(with: .midnight, in: .current).adding(timeInterval)
         let day = Day(from: date, in: .current)
         return day
     }
     
-    static func - (lhs: Day, days: UInt) -> Day {
-        let timeInterval = TimeInterval.day * -Double(days)
-        let date = lhs.date(with: Time.midnight, in: .current).addingTimeInterval(timeInterval)
+    static func - (lhs: Day, days: Int) -> Day {
+        let timeInterval = TimeInterval.day * Double(days)
+        let date = lhs.date(with: .midnight, in: .current).subtracting(timeInterval)
         return Day(from: date, in: .current)
     }
 }
@@ -96,19 +100,19 @@ extension Day: Hashable {
 extension Day: Comparable {
     
     public static func <(lhs: Day, rhs: Day) -> Bool {
-        return lhs.date(with: Time.midnight, in: .current) < rhs.date(with: Time.midnight, in: .current)
+        return lhs.date(with: .midnight, in: .current) < rhs.date(with: .midnight, in: .current)
     }
     
     public static func <=(lhs: Day, rhs: Day) -> Bool {
-        return lhs.date(with: Time.midnight, in: .current) <= rhs.date(with: Time.midnight, in: .current)
+        return lhs.date(with: .midnight, in: .current) <= rhs.date(with: .midnight, in: .current)
     }
     
     public static func >=(lhs: Day, rhs: Day) -> Bool {
-        return lhs.date(with: Time.midnight, in: .current) >= rhs.date(with: Time.midnight, in: .current)
+        return lhs.date(with: .midnight, in: .current) >= rhs.date(with: .midnight, in: .current)
     }
     
     public static func >(lhs: Day, rhs: Day) -> Bool {
-        return lhs.date(with: Time.midnight, in: .current) > rhs.date(with: Time.midnight, in: .current)
+        return lhs.date(with: .midnight, in: .current) > rhs.date(with: .midnight, in: .current)
     }
 }
 

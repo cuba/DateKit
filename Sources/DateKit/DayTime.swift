@@ -34,15 +34,21 @@ struct DayTime {
     }
     
     static func + (lhs: DayTime, timeInterval: TimeInterval) -> DayTime {
-        let date = lhs.date(in: .current).addingTimeInterval(timeInterval)
-        
+        let date = lhs.date(in: .current).adding(timeInterval)
         return DayTime(from: date, in: .current)
     }
     
     static func - (lhs: DayTime, timeInterval: TimeInterval) -> DayTime {
-        let date = lhs.date(in: .current).addingTimeInterval(timeInterval)
-        
+        let date = lhs.date(in: .current).subtracting(timeInterval)
         return DayTime(from: date, in: .current)
+    }
+    
+    static func + (lhs: DayTime, duration: Duration) -> DayTime {
+        return lhs + duration.timeInterval
+    }
+    
+    static func - (lhs: DayTime, duration: Duration) -> DayTime {
+        return lhs - duration.timeInterval
     }
 }
 

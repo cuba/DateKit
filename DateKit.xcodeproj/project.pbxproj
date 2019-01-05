@@ -29,8 +29,15 @@
 		DA7E1BDC21E06F8A00CCB7E0 /* Time.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BD521E06F4F00CCB7E0 /* Time.swift */; };
 		DA7E1BDD21E06F8D00CCB7E0 /* DayTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BD721E06F6100CCB7E0 /* DayTime.swift */; };
 		DA7E1BE121E0728000CCB7E0 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BE021E0728000CCB7E0 /* TimeInterval+Extensions.swift */; };
+		DA7E1BE321E07B9200CCB7E0 /* DayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BE221E07B9200CCB7E0 /* DayTests.swift */; };
+		DA7E1BE521E080EC00CCB7E0 /* TimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BE421E080EC00CCB7E0 /* TimeTests.swift */; };
+		DA7E1BE721E0810D00CCB7E0 /* DayTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BE621E0810D00CCB7E0 /* DayTimeTests.swift */; };
+		DA7E1BE921E13F4000CCB7E0 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BE821E13F4000CCB7E0 /* Duration.swift */; };
+		DA7E1BEA21E13F4000CCB7E0 /* Duration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BE821E13F4000CCB7E0 /* Duration.swift */; };
+		DA7E1BEC21E14A4800CCB7E0 /* DurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BEB21E14A4800CCB7E0 /* DurationTests.swift */; };
+		DA7E1BEE21E159C300CCB7E0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BED21E159C300CCB7E0 /* Date+Extensions.swift */; };
+		DA7E1BEF21E159C300CCB7E0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BED21E159C300CCB7E0 /* Date+Extensions.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
-		OBJ_40 /* DateKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* DateKitTests.swift */; };
 		OBJ_41 /* XCTestManifests.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_13 /* XCTestManifests.swift */; };
 		OBJ_43 /* DateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "DateKit::DateKit::Product" /* DateKit.framework */; };
 /* End PBXBuildFile section */
@@ -60,9 +67,14 @@
 		DA7E1BD521E06F4F00CCB7E0 /* Time.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Time.swift; sourceTree = "<group>"; };
 		DA7E1BD721E06F6100CCB7E0 /* DayTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTime.swift; sourceTree = "<group>"; };
 		DA7E1BE021E0728000CCB7E0 /* TimeInterval+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+Extensions.swift"; sourceTree = "<group>"; };
+		DA7E1BE221E07B9200CCB7E0 /* DayTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTests.swift; sourceTree = "<group>"; };
+		DA7E1BE421E080EC00CCB7E0 /* TimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTests.swift; sourceTree = "<group>"; };
+		DA7E1BE621E0810D00CCB7E0 /* DayTimeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayTimeTests.swift; sourceTree = "<group>"; };
+		DA7E1BE821E13F4000CCB7E0 /* Duration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Duration.swift; sourceTree = "<group>"; };
+		DA7E1BEB21E14A4800CCB7E0 /* DurationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DurationTests.swift; sourceTree = "<group>"; };
+		DA7E1BED21E159C300CCB7E0 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
 		"DateKit::DateKit::Product" /* DateKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = DateKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		"DateKit::DateKitTests::Product" /* DateKitTests.xctest */ = {isa = PBXFileReference; lastKnownFileType = file; path = DateKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		OBJ_12 /* DateKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateKitTests.swift; sourceTree = "<group>"; };
 		OBJ_13 /* XCTestManifests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestManifests.swift; sourceTree = "<group>"; };
 		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -106,6 +118,7 @@
 			isa = PBXGroup;
 			children = (
 				DA7E1BE021E0728000CCB7E0 /* TimeInterval+Extensions.swift */,
+				DA7E1BED21E159C300CCB7E0 /* Date+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -121,7 +134,10 @@
 		OBJ_11 /* DateKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				OBJ_12 /* DateKitTests.swift */,
+				DA7E1BEB21E14A4800CCB7E0 /* DurationTests.swift */,
+				DA7E1BE621E0810D00CCB7E0 /* DayTimeTests.swift */,
+				DA7E1BE421E080EC00CCB7E0 /* TimeTests.swift */,
+				DA7E1BE221E07B9200CCB7E0 /* DayTests.swift */,
 				OBJ_13 /* XCTestManifests.swift */,
 			);
 			name = DateKitTests;
@@ -165,6 +181,7 @@
 				DA7E1BD321E06F4100CCB7E0 /* Day.swift */,
 				DA7E1BD521E06F4F00CCB7E0 /* Time.swift */,
 				DA7E1BD721E06F6100CCB7E0 /* DayTime.swift */,
+				DA7E1BE821E13F4000CCB7E0 /* Duration.swift */,
 			);
 			name = DateKit;
 			path = Sources/DateKit;
@@ -303,6 +320,8 @@
 				DA7E1BDC21E06F8A00CCB7E0 /* Time.swift in Sources */,
 				DA7E1BDB21E06F8700CCB7E0 /* Day.swift in Sources */,
 				DA7E1BDD21E06F8D00CCB7E0 /* DayTime.swift in Sources */,
+				DA7E1BEF21E159C300CCB7E0 /* Date+Extensions.swift in Sources */,
+				DA7E1BEA21E13F4000CCB7E0 /* Duration.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,10 +329,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
+				DA7E1BE921E13F4000CCB7E0 /* Duration.swift in Sources */,
 				DA7E1BD621E06F4F00CCB7E0 /* Time.swift in Sources */,
 				DA7E1BD821E06F6100CCB7E0 /* DayTime.swift in Sources */,
 				DA7E1BD421E06F4100CCB7E0 /* Day.swift in Sources */,
 				DA7E1BE121E0728000CCB7E0 /* TimeInterval+Extensions.swift in Sources */,
+				DA7E1BEE21E159C300CCB7E0 /* Date+Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,8 +350,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 0;
 			files = (
-				OBJ_40 /* DateKitTests.swift in Sources */,
+				DA7E1BE521E080EC00CCB7E0 /* TimeTests.swift in Sources */,
+				DA7E1BE721E0810D00CCB7E0 /* DayTimeTests.swift in Sources */,
+				DA7E1BE321E07B9200CCB7E0 /* DayTests.swift in Sources */,
 				OBJ_41 /* XCTestManifests.swift in Sources */,
+				DA7E1BEC21E14A4800CCB7E0 /* DurationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
