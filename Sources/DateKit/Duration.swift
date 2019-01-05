@@ -8,9 +8,9 @@
 import Foundation
 
 /**
- Duration represents time passed (or time that will pass) in weeks, days and hours, minutes, seconds and nanoseconds. It provides a way to represent date components that can be converted to a time interval without knowing the reference date.
+ `Duration` represents time passed (or time that will pass) in weeks, days and hours, minutes, seconds and nanoseconds. It provides a way to represent date components that can be converted to a time interval without knowing the reference date.
  
- Years, and months are not supported as they cannot be converted to a time interval without knowing a reference date and time zone. The reason for this is because the length of a month or year (in seconds) changes depending on the reference date. Leap years, for example, are shorter in seconds than non-leap years and a single month may be between 28 days (i.e. February) to 31 days (ex: December).
+ Years and months are not supported as they cannot be converted to a time interval without knowing a reference date and time zone. The reason for this is because the length of a month or year (in seconds) changes depending on the reference date. Leap years, for example, are shorter in seconds than non-leap years and a single month may be between 28 days (i.e. February) to 31 days (ex: December).
  */
 public struct Duration {
     

@@ -80,6 +80,95 @@
             
             <h1 id='datekit' class='heading'>DateKit</h1>
 
+<p>Add extra date functionality for objects that do not represent a timestamp.</p>
+
+<p><a href="https://swift.org"><img src="https://img.shields.io/badge/swift-4.2-lightgrey.svg?style=for-the-badge" alt="Swift 4.2"></a>
+<a href="https://vapor.codes"><img src="https://img.shields.io/badge/vapor-3-lightgrey.svg?style=for-the-badge" alt="Vapor 3"></a>
+<img src="https://img.shields.io/badge/iOS-8-lightgrey.svg?style=for-the-badge" alt="iOS 8">
+<img src="https://img.shields.io/badge/carthage-compatible-green.svg?style=for-the-badge" alt="Carthage">
+<img src="https://img.shields.io/badge/SPM-compatible-green.svg?style=for-the-badge" alt="SPM">
+<a href="https://github.com/cuba/DateKit/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg?style=for-the-badge" alt="GitHub"></a></p>
+
+<p><a href="https://travis-ci.org/cuba/DateKit"><img src="https://img.shields.io/travis/cuba/DateKit/master.svg?style=for-the-badge" alt="Build"></a></p>
+
+<ul>
+<li><a href="#features">Features</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#credits">Credits</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+<h2 id='features' class='heading'>Features</h2>
+
+<ul>
+<li>[x] Date representations without timezone</li>
+<li>[x] Easy integration</li>
+<li>[x] Easily convert to and from framwork <code>Date</code> objects</li>
+<li>[x] Uses swift 4.2</li>
+<li>[x] Supports iOS 8 and up</li>
+<li>[x] Carthage support</li>
+<li>[x] SPM support</li>
+</ul>
+<h2 id='usage' class='heading'>Usage</h2>
+
+<p>For the full documentation, click here: <a href="https://cuba.github.io/DateKit/">https://cuba.github.io/DateKit/</a></p>
+<h3 id='import-code-datekit-code' class='heading'>Import <code>DateKit</code></h3>
+
+<p>Add the following to the top of any swift file using <code>MapCodableKit</code></p>
+<pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">DateKit</span> 
+</code></pre>
+<h3 id='day-local-date' class='heading'>Day (Local Date)</h3>
+
+<p><code><a href="Structs/Day.html">Day</a></code> (also known as <q>Local Date</q>) represents an object containing the year, month and day components in a calendar.</p>
+
+<p>TODO: Examples</p>
+<h3 id='time-local-time' class='heading'>Time (Local Time)</h3>
+
+<p><code><a href="Structs/Time.html">Time</a></code>  (also known as <q>Local Time</q>) object represents an object containing the hour, minute and second and nanosecond components in a calendar.</p>
+
+<p>Since time is circular (starts at 0 and ends back at 0), time is not comparable as 3am may be larger than 9am.  To compare time we need more information (such as the day).</p>
+
+<p>TODO: Examples</p>
+<h3 id='daytime-local-date-time' class='heading'>DayTime (Local Date Time)</h3>
+
+<p><code><a href="Structs/DayTime.html">DayTime</a></code> (also known as <q>Local Date Time</q>) object represents an object containing the year, month and day, hour, minute, second and nanosecond components in a calendar. Its a convenience grouping of <code><a href="Structs/Day.html">Day</a></code> and <code><a href="Structs/Time.html">Time</a></code> object.</p>
+
+<p>TODO: Examples</p>
+<h3 id='duration' class='heading'>Duration</h3>
+
+<p>Duration represents time passed (or time that will pass) in weeks, days and hours, minutes, seconds and nanoseconds. It provides a way to represent date components that can be converted to a time interval without knowing the reference date.</p>
+
+<p>Years, and months are not supported as they cannot be converted to a time interval without knowing a reference date and time zone. The reason for this is because the length of a month or year (in seconds) changes depending on the reference date. Leap years, for example, are shorter in seconds than non-leap years and a single month may be between 28 days (i.e. February) to 31 days (ex: December).</p>
+
+<p>TODO: Examples</p>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='package-manager' class='heading'>Package Manager</h3>
+
+<p>Package manager is a powerful packaging tool built into xcode.  For the full documentation on how to use package manager, click <a href="https://swift.org/package-manager/">here</a></p>
+<h3 id='carthage' class='heading'>Carthage</h3>
+
+<p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.</p>
+
+<p>You can install Carthage with <a href="http://brew.sh/">Homebrew</a> using the following command:</p>
+<pre class="highlight shell"><code><span class="nv">$ </span>brew update
+<span class="nv">$ </span>brew <span class="nb">install </span>carthage
+</code></pre>
+
+<p>To integrate <code>DateKit</code> into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "cuba/DateKit" ~&gt; 1.0
+</code></pre>
+
+<p>Run <code>carthage update</code> to build the framework and drag the built <code>MapCodableKit.framework</code> into your Xcode project.</p>
+<h2 id='dependencies' class='heading'>Dependencies</h2>
+
+<p><code>Framework</code> is the only dependency 😁</p>
+<h2 id='credits' class='heading'>Credits</h2>
+
+<p><code>DateKit</code> is owned and maintained by Jacob Sikorski.</p>
+<h2 id='license' class='heading'>License</h2>
+
+<p><code>DateKit</code> is released under the MIT license. <a href="https://github.com/cuba/DateKit/blob/master/LICENSE">See LICENSE</a> for details.</p>
+
           </section>
         </section>
         <section id="footer">
