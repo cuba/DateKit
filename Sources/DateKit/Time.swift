@@ -8,7 +8,7 @@
 import Foundation
 
 /**
- Time object represents an object containing the hour, minute and second and nanosecond components in a calendar.
+ `Time` represents an object containing the hour, minute and second and nanosecond components in a calendar.
  
  Since time is circular (starts at 0 and ends back at 0), time is not comparable as 3am may be larger than 9am.  To compare time we need more information (such as the day).
  */

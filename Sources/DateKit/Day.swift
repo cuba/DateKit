@@ -8,7 +8,7 @@
 import Foundation
 
 /**
- Day object represents an object containing the year, month and day components in a calendar.
+ `Day` represents an object containing the year, month and day components in a calendar.
  
  Its purpose is to represent a Local Date object
  */

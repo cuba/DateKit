@@ -8,7 +8,7 @@
 import Foundation
 
 /**
- DayTime object represents an object containing the year, month and day, hour, minute, second and nanosecond components in a calendar. Its a convenience grouping of `Day` and `Time` object.
+ `DayTime` represents an object containing the year, month and day, hour, minute, second and nanosecond components in a calendar. Its a convenience grouping of `Day` and `Time` object.
  
  Its purpose is to represent a Local Date and Time object.
  */
