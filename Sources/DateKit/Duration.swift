@@ -38,4 +38,23 @@ struct Duration {
         
         return timeInterval
     }
+    
+    static func + (lhs: Duration, rhs: Duration) -> Duration {
+        return Duration(weeks: lhs.weeks + rhs.weeks, days: lhs.days + rhs.days, hours: lhs.hours + rhs.hours, minutes: lhs.minutes + rhs.minutes, seconds: lhs.seconds + rhs.seconds, nanoseconds: lhs.nanoseconds + rhs.nanoseconds)
+    }
+    
+    static func - (lhs: Duration, rhs: Duration) -> Duration {
+        return Duration(weeks: lhs.weeks - rhs.weeks, days: lhs.days - rhs.days, hours: lhs.hours - rhs.hours, minutes: lhs.minutes - rhs.minutes, seconds: lhs.seconds - rhs.seconds, nanoseconds: lhs.nanoseconds - rhs.nanoseconds)
+    }
+}
+
+extension Duration: Equatable {
+    public static func == (lhs: Duration, rhs: Duration) -> Bool {
+        return lhs.weeks == rhs.weeks
+            && rhs.days == rhs.days
+            && rhs.hours == rhs.hours
+            && rhs.minutes == rhs.minutes
+            && rhs.seconds == rhs.seconds
+            && rhs.nanoseconds == rhs.nanoseconds
+    }
 }
