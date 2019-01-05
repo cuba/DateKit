@@ -40,11 +40,37 @@ struct Duration {
     }
     
     static func + (lhs: Duration, rhs: Duration) -> Duration {
-        return Duration(weeks: lhs.weeks + rhs.weeks, days: lhs.days + rhs.days, hours: lhs.hours + rhs.hours, minutes: lhs.minutes + rhs.minutes, seconds: lhs.seconds + rhs.seconds, nanoseconds: lhs.nanoseconds + rhs.nanoseconds)
+        return lhs.adding(rhs)
     }
     
     static func - (lhs: Duration, rhs: Duration) -> Duration {
-        return Duration(weeks: lhs.weeks - rhs.weeks, days: lhs.days - rhs.days, hours: lhs.hours - rhs.hours, minutes: lhs.minutes - rhs.minutes, seconds: lhs.seconds - rhs.seconds, nanoseconds: lhs.nanoseconds - rhs.nanoseconds)
+        return lhs.subtracting(rhs)
+    }
+    
+    mutating func add(_ duration: Duration) {
+        weeks = weeks + duration.weeks
+        days = days + duration.days
+        hours = hours + duration.hours
+        minutes = minutes + duration.minutes
+        seconds = seconds + duration.seconds
+        nanoseconds = nanoseconds + duration.nanoseconds
+    }
+    
+    mutating func subtract(_ duration: Duration) {
+        weeks = weeks - duration.weeks
+        days = days - duration.days
+        hours = hours - duration.hours
+        minutes = minutes - duration.minutes
+        seconds = seconds - duration.seconds
+        nanoseconds = nanoseconds - duration.nanoseconds
+    }
+    
+    func adding(_ duration: Duration) -> Duration {
+        return Duration(weeks: weeks + duration.weeks, days: days + duration.days, hours: hours + duration.hours, minutes: minutes + duration.minutes, seconds: seconds + duration.seconds, nanoseconds: nanoseconds + duration.nanoseconds)
+    }
+    
+    func subtracting(_ duration: Duration) -> Duration {
+        return Duration(weeks: weeks - duration.weeks, days: days - duration.days, hours: hours - duration.hours, minutes: minutes - duration.minutes, seconds: seconds - duration.seconds, nanoseconds: nanoseconds - duration.nanoseconds)
     }
 }
 

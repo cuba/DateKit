@@ -30,6 +30,32 @@ class DurationTests: XCTestCase {
         XCTAssertEqual(testDate, date.addingTimeInterval(timeInterval))
     }
     
+    func testAddDuration() {
+        // Given
+        var duration = Duration(weeks: 1, days: 1, hours: 1, minutes: 1, seconds: 1, nanoseconds: 0)
+        let duration2 = Duration(weeks: 2, days: 2, hours: 2, minutes: 2, seconds: 2, nanoseconds: 0)
+        
+        // When
+        duration.add(duration2)
+        
+        // Then
+        let expected = Duration(weeks: 3, days: 3, hours: 3, minutes: 3, seconds: 3, nanoseconds: 0)
+        XCTAssertEqual(duration, expected)
+    }
+    
+    func testSubtractDuration() {
+        // Given
+        var duration = Duration(weeks: 1, days: 1, hours: 1, minutes: 1, seconds: 1, nanoseconds: 0)
+        let duration2 = Duration(weeks: 2, days: 2, hours: 2, minutes: 2, seconds: 2, nanoseconds: 0)
+        
+        // When
+        duration.subtract(duration2)
+        
+        // Then
+        let expected = Duration(weeks: -1, days: -1, hours: -1, minutes: -1, seconds: -1, nanoseconds: 0)
+        XCTAssertEqual(duration, expected)
+    }
+    
     func testAddingDuration() {
         // Given
         let duration1 = Duration(weeks: 1, days: 1, hours: 1, minutes: 1, seconds: 1, nanoseconds: 0)
@@ -58,6 +84,8 @@ class DurationTests: XCTestCase {
     
     static var allTests = [
         ("testTimeInterval", testTimeInterval),
+        ("testAddDuration", testAddDuration),
+        ("testSubtractDuration", testSubtractDuration),
         ("testAddingDuration", testAddingDuration),
         ("testSubtractingDuration", testSubtractingDuration)
     ]
