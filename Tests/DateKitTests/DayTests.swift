@@ -162,7 +162,7 @@ class DayTests: XCTestCase {
         let days = 1000
         
         // When
-        let result = day + days
+        let result = day + (TimeInterval.day * Double(days))
         
         // Then
         let testDay = Day(year: 1987, month: 3, day: 19)
@@ -175,7 +175,7 @@ class DayTests: XCTestCase {
         let days = 1000
         
         // When
-        let result = day - days
+        let result = day - (TimeInterval.day * Double(days))
         
         // Then
         let testDay = Day(year: 1981, month: 9, day: 27)
