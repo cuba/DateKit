@@ -37,6 +37,7 @@
 		DA7E1BEC21E14A4800CCB7E0 /* DurationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BEB21E14A4800CCB7E0 /* DurationTests.swift */; };
 		DA7E1BEE21E159C300CCB7E0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BED21E159C300CCB7E0 /* Date+Extensions.swift */; };
 		DA7E1BEF21E159C300CCB7E0 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BED21E159C300CCB7E0 /* Date+Extensions.swift */; };
+		DA7E1BF021E187F700CCB7E0 /* TimeInterval+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA7E1BE021E0728000CCB7E0 /* TimeInterval+Extensions.swift */; };
 		OBJ_29 /* Package.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_6 /* Package.swift */; };
 		OBJ_43 /* DateKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "DateKit::DateKit::Product" /* DateKit.framework */; };
 /* End PBXBuildFile section */
@@ -151,7 +152,7 @@
 			name = Products;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		OBJ_5 /*  */ = {
+		OBJ_5 = {
 			isa = PBXGroup;
 			children = (
 				OBJ_6 /* Package.swift */,
@@ -159,7 +160,6 @@
 				OBJ_10 /* Tests */,
 				OBJ_14 /* Products */,
 			);
-			name = "";
 			sourceTree = "<group>";
 		};
 		OBJ_7 /* Sources */ = {
@@ -285,7 +285,7 @@
 			knownRegions = (
 				en,
 			);
-			mainGroup = OBJ_5 /*  */;
+			mainGroup = OBJ_5;
 			productRefGroup = OBJ_14 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -315,6 +315,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA7E1BDC21E06F8A00CCB7E0 /* Time.swift in Sources */,
+				DA7E1BF021E187F700CCB7E0 /* TimeInterval+Extensions.swift in Sources */,
 				DA7E1BDB21E06F8700CCB7E0 /* Day.swift in Sources */,
 				DA7E1BDD21E06F8D00CCB7E0 /* DayTime.swift in Sources */,
 				DA7E1BEF21E159C300CCB7E0 /* Date+Extensions.swift in Sources */,
@@ -374,6 +375,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -422,7 +424,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Sources/DateKit iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -442,6 +444,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				APPLICATION_EXTENSION_API_ONLY = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -490,7 +493,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				INFOPLIST_FILE = "Sources/DateKit iOS/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
