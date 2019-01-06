@@ -8,7 +8,6 @@
 import XCTest
 @testable import DateKit
 
-
 class TimeTests: XCTestCase {
 
     func testValidHourMinuteSecondAndNanosecond_TimeIsCreated() {

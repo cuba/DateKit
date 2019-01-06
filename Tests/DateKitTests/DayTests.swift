@@ -159,13 +159,13 @@ class DayTests: XCTestCase {
     func testAddingDays() {
         // Given
         let day = Day(year: 1984, month: 6, day: 23)
-        let days = 1000
+        let days = 10
         
         // When
         let result = day + (TimeInterval.day * Double(days))
         
         // Then
-        let testDay = Day(year: 1987, month: 3, day: 19)
+        let testDay = Day(year: 1984, month: 7, day: 3)
         XCTAssertEqual(testDay, result)
     }
     
